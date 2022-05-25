@@ -13,7 +13,7 @@ We have not released it to npm and the package name is subject to future change,
 please hold on for the time being.
 ```
 ## Basic Usage
-```
+```javascript
 // the final npm name is not decided and is subject to change. 
 import {TiktokBusinessExternalDataGenerator} from '@placeholderplaceholder@';
 const key = "TEST_KEY"
@@ -50,7 +50,7 @@ console.log(external_data);
 
 
 ### new TiktokBusinessExternalDataGenerator() constructor
-```
+```javascript
 const generator = new TiktokBusinessExternalDataGenerator(
    // key is used to generate hmac, be sure not to expose it to the public or commit to any of your codebase
    // Marketing Api App secret
@@ -62,7 +62,7 @@ const generator = new TiktokBusinessExternalDataGenerator(
 ```
 
 ### generator#code
-```
+```javascript
   // This function returns the final json body in case you need it
   // and the external_data which should be passed as a parameter to tiktok's onboarding flow
 
@@ -84,7 +84,7 @@ const generator = new TiktokBusinessExternalDataGenerator(
 ```
 
 ### generator#decodeAndVerify
-```
+```javascript
 // This method is used by Tiktok's server side to verify whether you external_data is valid or not.
 // Normally you don't need to invoke this function
 
